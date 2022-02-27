@@ -105,8 +105,8 @@ const AppProvider = ({ children }: AppProviderProps) => {
   }, [newRound]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
     deal();
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => {
       return clearTimeout(timer);
     };
